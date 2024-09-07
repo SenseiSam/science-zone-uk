@@ -1,4 +1,4 @@
-# Lesson 4 - Calculator
+# Lesson 5 - Calculator
 
 Skills learnt:
 - if statements, selection
