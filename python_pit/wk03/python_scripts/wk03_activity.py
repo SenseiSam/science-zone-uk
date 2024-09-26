@@ -1,33 +1,34 @@
-# Week 1: Introduction to Python - Class Activity
+# Week 3: Week 3: Loops (For and While) - Class Activity
 
-# Start with a simple print statement to greet the user
-print("Hello! Let's get to know each other!")
+# Start with selecting a secret number and storing it as a variable
+secret_number = 7
 
-# Ask the user for their name using the input function
-# The input function collects data from the user and stores it in the variable 'name'
-name = input("What is your name? ")
+# We also need to create another variable called 'guess' to store the users guess
+guess = 0
 
-# Now that we have the user's name, we can personalize our responses
-# Use the variable 'name' inside a print statement
-print("Nice to meet you, " + name + "!")
+# To keep the program running forever until the secret number is guessed, a while loop is better to use than a for loop 
+# Use a while loop to repeat all the code within the loop until the user guesses the secret number
+# All the code inside the loop must be indented!
+while guess != secret_number:
+    
+    # The input function collects data from the user and stores it in the variable 'guess'
+    guess = int(input("Guess the number: "))
 
-# Ask the user for their favorite color
-# Again, we use the input function and store the response in a variable called 'color'
-color = input("What's your favorite color? ")
+    # Use a conditional statement (if, elif, else) to see if the user has guessed the number or offer a hint
+    # First is an if statement to check if guess is equal to the secret number
+    # Use a break command to exit outside of the loop and continue the program
+    if guess == secret_number:
+        break
 
-# Respond to the user's input
-# We combine strings using '+' and include the 'color' variable in our response
-print(color + " is a great color!")
+    # Next is an elif statement to check if the guess is bigger than the secret number
+    elif guess > secret_number:
+        print("Too High! The secret number is lower than your guess")
 
-# Let's ask for the user's age
-# The input function returns data as a string, so we need to convert it to an integer using int()
-age = int(input("How old are you? "))
+    # Finally an else statement as the number must be smaller than the secret number
+    else:
+        print("Too Low! The secret number is higher than your guess")
 
-# Now let's print a message based on their age
-if age < 18:
-    print("You're still young, " + name + "!")
-else:
-    print("You're an adult now, " + name + "!")
+# Outside of the loop, this will be shown to the user once they guess the secret number
+print("You guessed it! The secret number was " + str(secret_number))
 
-# Final message to end the conversation
-print("It was fun chatting with you, " + name + ". Have a great day!")
+    
